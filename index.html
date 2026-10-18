@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<title>thank u youssra</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Amiri:wght@700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050108;min-height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center}
+#intro{position:fixed;inset:0;background: radial-gradient(ellipse at center, #1a0a14 0%, #05020a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:100;transition:opacity 1s;text-align:center;padding:20px}
+#intro p{font-family:'Amiri',serif;font-size:32px;color:#fff;text-shadow:0 0 20px #ff4d8d,0 0 40px #ff4d8d;line-height:1.4}
+#giftBtn{margin-top:30px;padding:16px 45px;font-family:'Amiri',serif;font-size:20px;background:linear-gradient(90deg,#ff2d78,#ff6a9f);border:none;border-radius:50px;color:white;cursor:pointer;box-shadow:0 0 30px rgba(255,45,120,.7);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+#timer{font-family:'Great Vibes',cursive;font-size:70px;color:#ff3e8a;margin-top:25px;text-shadow:0 0 20px #ff3e8a;display:none}
+#main{width:100%;height:100vh;display:flex;flex-direction:column;align-items:center;opacity:0;transition:opacity 1.2s;padding:20px;background: radial-gradient(ellipse at center, #120812 0%, #050108 70%);overflow-y:auto}
+h2{font-family:'Great Vibes',cursive;font-size:54px;color:#ff3e8a;text-shadow:0 0 15px #ff3e8a,0 0 35px #ff3e8a;margin-top:40px}
+h2 span{color:#fff;text-shadow:0 0 15px #fff,0 0 35px #fff}
+.sub{font-family:'Dancing Script',cursive;color:#ffb3d1;font-size:19px;margin-bottom:25px;letter-spacing:1px}
+#textBox{width:420px;max-width:92vw;padding:28px;border:1px solid rgba(255,77,141,0.25);border-radius:20px;background:rgba(255,77,141,0.06);line-height:2.4;text-align:center;box-shadow:0 0 40px rgba(255,77,141,0.15)}
+.word{font-family:'Dancing Script',cursive;font-weight:700;font-size:22px;color:#ffd1e6;text-shadow:0 0 6px rgba(255,255,255,0.8),0 0 15px #ff4d8d,0 0 30px #ff2d78;opacity:0;animation:show .6s forwards;display:inline-block;margin:0 5px;letter-spacing:0.6px}
+.word.youssra{font-family:'Great Vibes',cursive;font-size:36px;font-weight:400;color:#fff;text-shadow:0 0 12px #fff,0 0 30px #ff4d8d,0 0 60px #ff2d78}
+@keyframes show{to{opacity:1}}
+.cursor{display:inline-block;width:2px;height:22px;background:#ff6ab3;box-shadow:0 0 8px #ff4d8d;margin-left:4px;animation:blink .7s infinite;vertical-align:middle}
+@keyframes blink{0%,50%{opacity:1} 51%,100%{opacity:0}}
+#bgMedia{position:fixed;width:1px;height:1px;opacity:0;left:-9999px;top:-9999px}
+</style>
+</head>
+<body class="notranslate">
+<video id="bgMedia" loop preload="auto" playsinline><source src="https://files.catbox.moe/3aa3d8.mp4" type="video/mp4"></video>
+
+<div id="intro" class="notranslate">
+  <p translate="no" class="notranslate">هذا كادو مني ليك نتمنا يعجبك 🎁</p>
+  <button id="giftBtn" onclick="startGift()" class="notranslate">دخلي تشوفي الكادو ديالك</button>
+  <div id="timer" class="notranslate">3</div>
+</div>
+
+<div id="main" class="notranslate">
+  <h2 translate="no" class="notranslate">Thank You <span>Youssra</span></h2>
+  <div class="sub notranslate">with respect and gratitude</div>
+  <div id="textBox" class="notranslate"></div>
+</div>
+
+<script>
+const media=document.getElementById('bgMedia'); let ctx,gain,src;
+function startGift(){
+  if(!ctx){ ctx=new (window.AudioContext||window.webkitAudioContext)(); src=ctx.createMediaElementSource(media); gain=ctx.createGain(); gain.gain.value=4.0; src.connect(gain); gain.connect(ctx.destination); }
+  ctx.resume(); media.muted=false; media.volume=1; media.play().catch(()=>{});
+  document.getElementById('giftBtn').style.display='none';
+  let timerEl=document.getElementById('timer'); timerEl.style.display='block'; let count=3; timerEl.textContent=count;
+  let countdown=setInterval(()=>{ count--; if(count>0){ timerEl.textContent=count; } else{ clearInterval(countdown); go(); } },1000);
+}
+function go(){ document.getElementById('intro').style.opacity=0; setTimeout(()=>document.getElementById('intro').style.display='none',1000); document.getElementById('main').style.opacity=1; typeText(); }
+const vocab=["Dear","Youssra","I","want","to","take","a","moment","to","sincerely","thank","you","Thank","you","so","much","for","your","incredible","support","your","help","and","your","kindness","I","may","not","know","you","very","well","but","your","generosity","and","your","good","heart","did","not","go","unnoticed","I","am","truly","grateful","for","everything","you","have","done","for","me","Your","time","your","effort","and","your","thoughtfulness","mean","a","lot","to","me","People","like","you","are","rare","to","find","You","have","my","utmost","respect","and","my","deepest","gratitude","Thank","you","again","Youssra","for","being","so","kind","and","supportive","Your","kindness","will","always","be","remembered","and","appreciated","With","all","my","respect","and","gratitude","Thank","you","Youssra"];
+function typeText(){ const box=document.getElementById('textBox'); let i=0; let t=setInterval(()=>{ if(i>=vocab.length){ clearInterval(t); box.querySelector('.cursor')?.remove(); return; } box.querySelector('.cursor')?.remove(); let s=document.createElement('span'); s.className='word '+(vocab[i]==='Youssra'?'youssra':''); s.setAttribute('translate','no'); s.classList.add('notranslate'); s.textContent=vocab[i]+' '; box.appendChild(s); let c=document.createElement('span'); c.className='cursor'; box.appendChild(c); i++; },270); }
+</script>
+</body>
+  </html>
